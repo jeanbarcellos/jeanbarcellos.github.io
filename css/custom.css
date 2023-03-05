@@ -1,122 +1,148 @@
 /* Correção no uso do padding nos navegadores */
-*, *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+html,
 body {
-    /*font-family: 'Ubuntu', sans-serif;*/
-    font-size: 18px;
-}
-
-a {
-    color: #1e7e34 !important;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
-    font-size: 50px;
-    letter-spacing: -2px;
-    line-height: 50px;
-    margin: 0 0 8px 0;
-    color: #333;
+  font-size: 40px;
+  letter-spacing: 0.035em;
+  line-height: 50px;
+  margin: 0 0 8px 0;
 }
 
 h2 {
-    font-size: 36px;
-    color: #333;
-    letter-spacing: -0.72px;
-    line-height: 43px;
-    margin: 40px 0 4px -1.8px;
+  font-size: 36px;
+  letter-spacing: -0.72px;
+  line-height: 43px;
+  margin: 40px 0 4px -1.8px;
 }
 
 p {
-    color: #333;
-    font-size: 18px;
-    letter-spacing: -0.1px;
-    line-height: 28px;
-    margin: 0 0 30px 0;
+  color: #333;
+  font-size: 18px;
+  letter-spacing: -0.1px;
+  line-height: 28px;
+  margin: 0 0 30px 0;
 }
 
 /**
  * CUSTOM
  */
 
-.container {
-    max-width: 750px;
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto;
 }
 
-.profile-image {
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    margin: 25px 0;
-    border: 3px solid #DDD;
+.bg-image-1 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-image-2 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+.details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+  border-width: 3px;
+  border-style: solid;
+  text-align: center;
+}
+
+.profile-name {
+  font-size: 40px;
+  margin-bottom: 20px;
+  /* text-transform: uppercase; */
 }
 
 .profile-description {
-    color: #777;
-    letter-spacing: -0.1px;
-    line-height: 25px;
-    margin: 0 0 10px 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  margin: -17px 0 25px 0;
 }
 
-.profile-links{
-    margin-bottom: 25px;
+.profile-social-links {
+  margin-bottom: 25px;
 }
 
-.profile-links a {
-    display: inline-block;
-    font-size: 16px;
-    margin: 0 10px;
+.profile-social-links a {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 0 5px;
 }
 
-.profile-cidade {
-    font-size: 16px;
-    margin-top: 40px;
+.fa {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
 }
 
-.profile-breve {
-    font-size: 16px;
-    margin: 40px 0 30px;
-    font-style: italic;
+.fa:hover {
+  opacity: 0.4;
+  text-decoration: none;
 }
 
+.profile-city {
+  font-size: 14px;
+}
 
 .text-align-center {
-    text-align: center;
+  text-align: center;
 }
 
-
-/**
- * RESPONSIVE
- */
-
-
-@media only screen and (max-width:767px) {
-
-    h1 {
-        font-size: 32px;
-    }
-
-    h2 {
-        font-size: 28px;
-        line-height: 1.2;
-    }
-
-    .profile-image {
-        border-radius: 50%;
-        width: 170px;
-        height: 170px;
-        margin: 25px 0;
-        border: 3px solid #DDD;
-    }
-
-    .profile-links a {
-        font-size: 14px;
-        margin: 0 10px;
-    }
-
-
+.color,
+.color a {
+  color: #ffffffc2;
 }
 
+.border-color,
+.border-color a {
+  border-color: #ffffffc2 !important;
+}
